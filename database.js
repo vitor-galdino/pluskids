@@ -1,4 +1,5 @@
 const syllableList = [
+    // not include "k" and "w"
     {
         letter: "A",
         words: [
