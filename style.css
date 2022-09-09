@@ -11,7 +11,6 @@
 body {
     font-family: 'Nunito', sans-serif;
     color: #eff6ec;
-    background-color: hsla(0, 100%, 50%, 0.44);
     background-image:
         radial-gradient(at 40% 20%, hsla(296, 100%, 83%, 1) 0px, transparent 50%),
         radial-gradient(at 80% 0%, hsla(279, 100%, 60%, 1) 0px, transparent 50%),
@@ -25,6 +24,10 @@ body {
     height: 100vh;
 }
 
+span::selection {
+    background-color: #ff477e;
+    color: #eff6ec;
+}
 
 .noise-filter {
     background: rgba(0, 0, 0, 0.085) url(/src/img/noise.svg);
@@ -56,7 +59,8 @@ body {
 .on-btn span {
     display: inline-block;
     font-size: 20px;
-    font-family: 'Changa One', arial, serif;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
     padding: 12px 15px;
     background: #FF477E;
     border-top: 1px solid rgba(255, 255, 255, .2);
@@ -66,12 +70,12 @@ body {
 }
 
 
-.on-btn:active span {
+.on-btn:hover span {
     transform: translateY(4px);
 }
 
 
-.on-btn:active {
+.on-btn:hover {
     box-shadow: 0 8px 0 #c01b4d, 0 7px 10px rgba(0, 0, 0, .25);
 }
 
@@ -89,13 +93,14 @@ body {
 .off-btn span {
     display: inline-block;
     font-size: 20px;
-    font-family: 'Changa One', arial, serif;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
     padding: 12px 15px;
     background: #ffb8cd;
     border-top: 1px solid rgba(255, 255, 255, .2);
     text-shadow: 0 -1px 1px rgba(69, 61, 65, 0.8);
     border-radius: 8px;
-    transform: translateY(4px);
+    transform: translateY(5px);
 }
 
 .main-menu {
@@ -149,4 +154,97 @@ body {
 .main-menu input::selection {
     background-color: #ff477e;
     color: #eff6ec;
+}
+
+.main-menu .error-name {
+    text-align: center;
+    margin-top: -25px;
+    color: rgba(255, 0, 0, 0.912);
+    font-weight: 500;
+    word-spacing: 2px;
+    transition: opacity .3s;
+}
+
+/* Alphabet page style */
+
+.alphabet-menu header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: -10px;
+
+}
+
+.alphabet-menu header .alphabet-title {
+    font-size: 17px;
+}
+
+.alphabet-menu header span {
+    color: #eff6ec63;
+    font-size: 14px;
+}
+
+.alphabet-menu .alphabet-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.alphabet-menu .alphabet-box button {
+    width: 45px;
+    user-select: none;
+}
+
+.alphabet-menu .alphabet-box span {
+    width: 45px;
+}
+
+/* playground page style */
+
+.syllabes-box {
+    display: flex;
+    gap: 15px;
+    margin: 40px 0 50px;
+}
+
+.syllabes-box .syllabe-btn {
+    width: 68px;
+}
+
+.syllabes-box .syllabe-btn span {
+    width: 68px;
+}
+
+.box-btn {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* final screen */
+
+.last-screen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: translateY(30px);
+}
+
+.last-screen header h2 {
+    font-size: 28px;
+}
+
+.last-screen header p {
+    color: #eff6ecab;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 7px;
+}
+
+.last-screen button {
+   align-self: center;
 }
